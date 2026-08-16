@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<documentoDLO cnpj="12345678" dataBase="2025-03" codigoDocumento="2061" tipoEnvio="I">
+
+	<!-- CONTAS E VALORES FICTIIOS, SEM CONSISTECIA NUMEICA, APENAS PARA DEMONSTRAR A ESTRUTURA DO ARQUIVO XML -->
+	<!-- Onde houver "...", outras tags semelhantes ?nterior podem/devem ocorrer com leiaute an?go -->
+	<!-- Repare que, dentro de tags no plural, ocorrem tags semelhantes no singular, detalhando cada caso individual -->
+
+	<!-- bloco de limites informados neste documento -->
+    <limitesInformados>
+        <limite codigoLimite="03.00" enviado="S"/>
+		<!-- ... -->
+        <limite codigoLimite="05.00" enviado="S"/>
+    </limitesInformados>
+		<!-- bloco com paratros do documento -->
+    <parametros>
+        <parametro codigoParametro="3" valorParametro="3"/>
+        <parametro codigoParametro="11" valorParametro="N"/>
+		<!-- ... -->
+		<parametro codigoParametro="31" valorParametro="fulano de tal"/>
+		<parametro codigoParametro="32" valorParametro="61-3333-3333"/>
+		<parametro codigoParametro="33" valorParametro="fulanodetal@tal.com.br"/>
+    </parametros>
+	
+	<!-- bloco de contas -->
+    <contas>
+		<!-- exemplo de conta individual sem detalhamentos -->
+        <conta codigoConta="100" valorConta="123.45"/>
+		
+		<!--exemplo de detalhamento da informação do limites de exposição por cliente e do limite de exposiçõess concentradas-->
+		<conta codigoConta="200" valorConta="4952000.00"/>
+		<conta codigoConta="200.01" valorConta="1742000.00">
+			<cliente identificacaoCliente="ABCD" tipoCliente="7" nomeCliente="ABCD S.A.">
+				<detalhamentosCliente>
+					<detalhamentoCliente identificacaoParticipante="99999999" tipoParticipante="02" razaoParticipante="01"/>
+					<!-- ... -->
+					<detalhamentoCliente identificacaoParticipante="ABCD LTD" tipoParticipante="04" razaoParticipante="05"/>
+				</detalhamentosCliente>
+			</cliente>
+			<detalhamentosDLO>
+				<detalhamentoDLO valorDetalhe="1492500.00">
+					<detalhe codigoElemento="63" valorElemento="1500000.00"/>
+					<detalhe codigoElemento="46" valorElemento="-7500.00"/>
+					<!-- ... -->
+					<detalhe codigoElemento="68" valorElemento="01"/>
+				</detalhamentoDLO>
+				<!-- ... -->
+			</detalhamentosDLO>
+		</conta>
+		
+		
+		<!-- exemplo de conta individual com detalhamentosDLO e detalhamentosCosif -->
+        <conta codigoConta="510.02" valorConta="0.00" valorCosif="55.61">
+            <detalhamentosDLO>
+                <detalhamentoDLO valorDetalhe="0.00">
+                    <detalhe codigoElemento="2" valorElemento="55.61"/>
+					<!-- ... -->
+                    <detalhe codigoElemento="45" valorElemento="999"/>
+                </detalhamentoDLO>
+            </detalhamentosDLO>
+            <detalhamentosCosif>
+                <detalhamentoCosif codigoCosif="1131000002" saldoCosif="55.61"/>
+            </detalhamentosCosif>
+        </conta>
+
+		<!--Apenas para fins de exemplificação, são apresentados abaixo um detalhamento do
+ grupo de contas 890/891, considerando outros fatores de risco e  outras  posiçiess
+em moeda estrangeira, buscando-se coerência  apenas nas agregaççoess das contas  -->
+		<conta codigoConta="890" valorConta="1000000.00"/>
+		<conta codigoConta="891" valorConta="1000000.00">
+			<detalhamentosDLO>
+				<detalhamentoDLO valorDetalhe="1000000.00">
+					<detalhe codigoElemento="55" valorElemento="1"/>
+					<detalhe codigoElemento="56" valorElemento="1"/>
+					<detalhe codigoElemento="57" valorElemento="252"/>
+					<detalhe codigoElemento="58" valorElemento="2"/>
+					<detalhe codigoElemento="59" valorElemento="300000.00"/>
+					<!--A conta 891 detalhada com os atributos facultativos ou obrigatórios acima-->
+				</detalhamentoDLO>
+			</detalhamentosDLO>
+		</conta>
+
+	<!-- fim do bloco 'contas' -->
+    </contas>
+	
+	<!-- bloco de instrumentos de capital -->
+	<instrumentosCapital>	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 
+		<instrumentoCapital idTitulo="xx1" localEmissor="01" codigoEmissor="99999999" idRegistradora="01" 
+					contaDLO="120.01.01" contaCosif="49999999" saldoCapital="1050.00" saldoContabil="1100.00" tipoClausula ="01" />
+		<instrumentoCapital/>	
+		<!-- ... -->
+	</instrumentosCapital>	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 
+
+</documentoDLO>
