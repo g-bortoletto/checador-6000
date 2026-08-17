@@ -1,0 +1,24 @@
+﻿"codigo","nome","codigoDominio","descricaoDominio","valorDominio"
+"11","Fusão/Incorporação",,,
+"22","Part Não Controlad",,,
+"25","CNPJ empresa fornec sistema",,,
+"26","Cod. Id.Rec. Instr. Aut. N1 e N2",,,
+"3","Opção da metodologia","1","Indicador Básico","1"
+"3","Opção da metodologia","2","Padronizada Alternativa","2"
+"3","Opção da metodologia","3","Padronizada Alternativa Simplificada","3"
+"31","Nome do responsável",,,
+"32","Telefone responsável",,,
+"33","Email do responsável",,,
+"4","Faculdade Perc. Máx.","1","Opção pelo Uso do Percentual Máximo","1"
+"4","Faculdade Perc. Máx.","2","Opção pela Apuração Detalhada do ACPContracíclico","2"
+"5","Opção Abordagem MR","1","Opção pela Utilização da Abordagem Simples","1"
+"5","Opção Abordagem MR","2","Opção pela Utilização da Abordagem Abrangente","2"
+"6","Segmento Regulação","1","Segmento 1 (S1)  bancos múltiplos, bancos comerciais, bancos de investimento, bancos de câmbio e caixas econômicas que tenham porte igual ou superior a 10% (dez por cento) do Produto Interno Bruto (PIB) ou exerçam atividade internancional relevante, independente do porte da instituição, observado o critério da alteração do enquadramento, ou por determinação do BCB conforme art. 7º da Res. 4.553/17.","1"
+"6","Segmento Regulação","2","Segmento 2 (S2) - bancos múltiplos, bancos comerciais, bancos de investimento, bancos de câmbio e caixas econômicas, de porte igual ou inferior a 10% (dez por cento) e igual ou superior a 1% (um por cento) do PIB e pelas demais instituições de porte igual ou superior a 1% (um por cento) do PIB, observado o critério da alteração do enquadramento, ou por determinação do BCB conforme art. 7º da Res. 4.553/17.","2"
+"6","Segmento Regulação","3","Segmento 3 (S3)  instituições de porte inferior a 1% (um por cento) e igual ou superior a 0,1% (um décimo por cento) do PIB, observado o critério da alteração do enquadramento, ou por determinação do BCB conforme art. 7º da Res. 4.553/17.","3"
+"6","Segmento Regulação","4","Segmento 4 (S4)  instituições de porte inferior a 0,1% (um décimo por cento) do PIB2, observado o critério da alteração do enquadramento4, ou por determinação do BCB conforme art. 7º da Res. 4.553/17.","4"
+"6","Segmento Regulação","5","Segmento 5 (S5)  Instituições optantes pela metodologia facultativa simplificada para apuração do requerimento mínimo de Patrimônio de Referência Simplificado - PRS5, conforme Res. 4.606/17.","5"
+"7","Op ut Lim Alter Coop","1","Opção pela utilização da Abordagem Alternativa","1"
+"7","Op ut Lim Alter Coop","2","Opção pela utilização da Abordagem Tradicional","2"
+"8","Opção abordagem derivativos SA-CCR/CEM","1","Opção pela utilização da abordagem SA-CCR","1"
+"8","Opção abordagem derivativos SA-CCR/CEM","2","Opção pela utilização da abordagem CEM","2"
