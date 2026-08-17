@@ -1,0 +1,19 @@
+id: DLO-RULE-023
+title: Leverage limit percentage schedule for other S1 and S2 institutions
+source:
+  file: "04-orientacoes-especificas/04.05-razao-alavancagem.md"
+  section: "4.5: – Detalhamento do Cálculo da Razão de Alavancagem (RA)"
+  pages: [21]
+  excerpt: "2% até 12/2026, 2,5% em 2027, e 3% a partir de 2028"
+type: conditional
+inputs: [institution_category, reference_date, total_exposure]
+conditions:
+  - "institution_category: other S1 or S2 institution"
+outcome:
+  limit_formula: "LRA = applicable_percentage * total_exposure"
+  percentage_schedule:
+    through_2026_12: 0.02
+    year_2027: 0.025
+    from_2028: 0.03
+notes:
+  - "The source separately sets 3% for the listed banks, Caixa Econômica Federal, and credit cooperatives."

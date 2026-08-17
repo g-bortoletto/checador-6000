@@ -1,0 +1,13 @@
+id: DLO-RULE-042
+title: DLO submission requires Sisbacen SLIM800 authorization
+source:
+  file: "02-orientacoes-gerais.md"
+  section: "2: - ORIENTAÇÕES GERAIS"
+  pages: [3, 4, 5]
+  excerpt: "Para o envio do DLO é necessário que o funcionário da instituição seja autorizado na transação Sisbacen SLIM800."
+type: requirement
+inputs: [submitter_authorizations]
+outcome:
+  required_authorization: Sisbacen_SLIM800
+notes:
+  - "The source says the institution's Master grants service access through Autran groups STRA1300 and STRA1310."

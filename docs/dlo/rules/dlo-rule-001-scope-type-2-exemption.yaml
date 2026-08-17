@@ -1,0 +1,14 @@
+id: DLO-RULE-001
+title: Type 2 institutions are exempt from DLO submission
+source:
+  file: "02-orientacoes-gerais.md"
+  section: "2: - ORIENTAÇÕES GERAIS"
+  pages: [3, 4, 5]
+  excerpt: "as instituições do Tipo 2, estão desobrigadas da remessa do DLO"
+type: requirement
+conditions:
+  - "institution_type: Tipo 2"
+outcome:
+  dlo_submission_required: false
+notes:
+  - "The source says that this instruction covers Types 1 and 3; it does not provide a self-contained method to classify an institution."

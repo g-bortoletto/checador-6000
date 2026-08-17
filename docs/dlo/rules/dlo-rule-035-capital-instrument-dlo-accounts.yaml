@@ -1,0 +1,13 @@
+id: DLO-RULE-035
+title: Capital instrument details use the specified DLO accounts
+source:
+  file: "04-orientacoes-especificas/04.10-instrumentos-capital.md"
+  section: "4.10: – Detalhamento das Informações Referente a Instrumentos de Captação Elegíveis a Capital"
+  pages: [28]
+  excerpt: "As contas DLO devem corresponder as contas 111.08, 112.01, 120.01.01 e 120.01.03.01."
+type: validation
+inputs: [contaDLO]
+conditions:
+  - "instrument_eligible_as_capital: true"
+outcome:
+  contaDLO_allowed_values: ["111.08", "112.01", "120.01.01", "120.01.03.01"]

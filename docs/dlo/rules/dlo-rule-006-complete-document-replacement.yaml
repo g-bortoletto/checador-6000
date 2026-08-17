@@ -1,0 +1,11 @@
+id: DLO-RULE-006
+title: Each DLO submission and replacement is complete
+source:
+  file: "02-orientacoes-gerais.md"
+  section: "2: - ORIENTAÇÕES GERAIS"
+  pages: [3, 4, 5]
+  excerpt: "O documento é único e deve ser preenchido com todas as informações solicitadas ... qualquer substituição envolverá a troca de todas as informações."
+type: requirement
+outcome:
+  document_scope: all_applicable_requested_information
+  replacement_scope: all_information

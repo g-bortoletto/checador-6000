@@ -1,0 +1,18 @@
+id: DLO-RULE-034
+title: Eligible capital instruments are reported individually in instrumentosCapital
+source:
+  file: "04-orientacoes-especificas/04.10-instrumentos-capital.md"
+  section: "4.10: – Detalhamento das Informações Referente a Instrumentos de Captação Elegíveis a Capital"
+  pages: [28]
+  excerpt: "deverão constar em tag específica ... <InstrumentosCapital>, com detalhamento para cada instrumento ... <instrumentoCapital>"
+type: requirement
+conditions:
+  - "instrument_eligible_as_capital: true"
+outcome:
+  required_container_tag: instrumentosCapital
+  required_per_instrument_tag: instrumentoCapital
+  required_fields: [idTitulo, localEmissor, codigoEmissor, idRegistradora, contaDLO, contaCosif, saldoCapital, saldoContabil, tipoClausula]
+references:
+  - section: "Tabela 029"
+  - section: "Tabela 035"
+  - section: "Tabela 050"

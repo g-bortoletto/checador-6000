@@ -1,0 +1,14 @@
+id: DLO-RULE-033
+title: LOC limits use thirty or five times DLO account 109
+source:
+  file: "04-orientacoes-especificas/04.09-operacoes-compromissadas.md"
+  section: "4.9: – Detalhamento do cálculo do limite para realização de operações compromissadas (LOC)"
+  pages: [26, 27]
+  excerpt: "30 ... vezes a base de cálculo (30 x conta DLO 109) ... 5 ... vezes a base de cálculo para operações realizadas com títulos privados, isoladamente."
+type: calculation
+inputs: [conta_109, operation_security_category]
+outcome:
+  public_or_mixed_private_limit_formula: "30 * conta_109"
+  private_securities_only_limit_formula: "5 * conta_109"
+notes:
+  - "The source defines the security categories and whether private securities are combined with the listed public securities."

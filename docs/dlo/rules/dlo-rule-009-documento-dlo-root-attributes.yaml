@@ -1,0 +1,20 @@
+id: DLO-RULE-009
+title: documentoDLO attributes have prescribed formats and values
+source:
+  file: "03-orientacoes-gerais-arquivo-xml.md"
+  section: "3: – ORIENTAÇÕES GERAIS SOBRE O ARQUIVO XML"
+  pages: [6, 7, 8, 9, 10, 11, 12, 13]
+  excerpt: "a data-base deve vir no formato AAAA-MM ... codigoDocumento deve ser preenchido com o código 2061"
+type: validation
+inputs: [cnpj, dataBase, codigoDocumento, tipoEnvio]
+conditions:
+  - "dataBase_format: YYYY-MM"
+  - "codigoDocumento: '2061'"
+  - "tipoEnvio in: ['I', 'D', 'E']"
+  - "cnpj: first 8 characters; numeric through 2026-06 and alphanumeric from 2026-07"
+outcome:
+  xml_root_attributes_valid: true
+references:
+  - section: "Tabela 014"
+notes:
+  - "The appropriate CNPJ is that of the non-conglomerate institution or, as applicable, the conglomerate leader."

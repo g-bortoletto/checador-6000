@@ -1,0 +1,14 @@
+id: DLO-RULE-040
+title: Previously exempt institutions start submission on the recorded triggering event
+source:
+  file: "02-orientacoes-gerais.md"
+  section: "2: - ORIENTAÇÕES GERAIS"
+  pages: [3, 4, 5]
+  excerpt: "o envio do Documento 2061 torna-se obrigatório a partir da data registrada no Unicad para o fato motivador"
+type: requirement
+conditions:
+  - "institution_was_previously_exempt: true"
+outcome:
+  submission_required_from: triggering_event_date_recorded_in_Unicad
+notes:
+  - "The source gives change of corporate purpose, exclusion from conglomerate, and resumption of activity as examples of triggering events."

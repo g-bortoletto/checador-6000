@@ -1,0 +1,12 @@
+id: DLO-RULE-012
+title: Sum of DLO details must equal the account balance
+source:
+  file: "03-orientacoes-gerais-arquivo-xml.md"
+  section: "3: – ORIENTAÇÕES GERAIS SOBRE O ARQUIVO XML"
+  pages: [6, 7, 8, 9, 10, 11, 12, 13]
+  excerpt: "a soma desses detalhes ('valorDetalhe') deve corresponder ao saldo da conta. O documento será rejeitado"
+type: validation
+inputs: [valorConta, valorDetalhe]
+outcome:
+  assertion: "sum(valorDetalhe) == valorConta"
+  failure_result: document_rejected

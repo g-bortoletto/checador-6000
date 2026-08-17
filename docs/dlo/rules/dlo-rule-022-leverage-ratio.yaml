@@ -1,0 +1,12 @@
+id: DLO-RULE-022
+title: Leverage ratio calculation and mitigation prohibition
+source:
+  file: "04-orientacoes-especificas/04.05-razao-alavancagem.md"
+  section: "4.5: – Detalhamento do Cálculo da Razão de Alavancagem (RA)"
+  pages: [21]
+  excerpt: "SALDO (140) = 100 * (SALDO (147.10.00) / SALDO (147.90.10)) ... não pode ser reconhecido nenhum instrumento mitigador"
+type: calculation
+inputs: [saldo_147_10_00, saldo_147_90_10]
+outcome:
+  formula: "saldo_140 = 100 * (saldo_147_10_00 / saldo_147_90_10)"
+  credit_risk_mitigator_reduces_exposure: false

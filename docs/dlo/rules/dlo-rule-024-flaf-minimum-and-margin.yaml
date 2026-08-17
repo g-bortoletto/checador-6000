@@ -1,0 +1,16 @@
+id: DLO-RULE-024
+title: Agency development liquidity fund minimum and margin
+source:
+  file: "04-orientacoes-especificas/04.06-fundo-liquidez-agencias-fomento.md"
+  section: "4.6: – Detalhamento do Cálculo do Fundo de Liquidez das Agências de Fomento"
+  pages: [22]
+  excerpt: "fundo de liquidez mínimo ... equivale a 10% ... conta 180.01 ... margem ... diferença entre as contas 181 e 180"
+type: calculation
+inputs: [conta_180_01, conta_181]
+outcome:
+  minimum_fund_formula: "0.10 * conta_180_01"
+  margin_formula: "conta_181 - conta_180"
+  margin_when: positive
+  insufficiency_when: negative
+notes:
+  - "The source says FLAF information is provided only by agencies of development."

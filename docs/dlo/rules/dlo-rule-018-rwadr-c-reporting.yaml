@@ -1,0 +1,13 @@
+id: DLO-RULE-018
+title: RWADRC value is reported only in account 862
+source:
+  file: "04-orientacoes-especificas/04.02-requerimentos-minimos-rwa.md"
+  section: "4.2: – Detalhamento da Apuração dos Requerimentos Mínimos em Relação ao RWA"
+  pages: [15, 16, 17, 18, 19]
+  excerpt: "Registrar o elemento 4 com o domínio 71 ou 72 (sem apuração de valores neste bloco de informações). O valor apurado deve ser lançado apenas na conta 862."
+type: requirement
+inputs: [elemento_4, rwadr_c_value]
+outcome:
+  elemento_4_domain: "71 or 72"
+  rwadr_c_value_account: "862"
+  value_in_rwacpad_detail_block: false

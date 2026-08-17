@@ -1,0 +1,13 @@
+id: DLO-RULE-032
+title: Declare LOC authorization with S for limits 51.00 and 52.00
+source:
+  file: "04-orientacoes-especificas/04.09-operacoes-compromissadas.md"
+  section: "4.9: – Detalhamento do cálculo do limite para realização de operações compromissadas (LOC)"
+  pages: [26, 27]
+  excerpt: "A habilitação ... deve ser demonstrada ... com a indicação do domínio 'S' para os códigos de limite 51.00 e 52.00."
+type: requirement
+conditions:
+  - "institution_authorized_for_repo_operations: true"
+outcome:
+  limite_51_00_enviado: "S"
+  limite_52_00_enviado: "S"

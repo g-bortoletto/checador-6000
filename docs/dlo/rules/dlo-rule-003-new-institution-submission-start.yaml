@@ -1,0 +1,12 @@
+id: DLO-RULE-003
+title: New institution submission starts on authorization publication
+source:
+  file: "02-orientacoes-gerais.md"
+  section: "2: - ORIENTAÇÕES GERAIS"
+  pages: [3, 4, 5]
+  excerpt: "O envio é obrigatório a partir da data de publicação da autorização de funcionamento no Diário Oficial pelo Banco Central."
+type: requirement
+conditions:
+  - "institution_status: new_individual_institution"
+outcome:
+  submission_required_from: authorization_publication_date

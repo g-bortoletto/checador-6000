@@ -1,0 +1,11 @@
+id: DLO-RULE-017
+title: RWA is the sum of its stated components
+source:
+  file: "04-orientacoes-especificas/04.02-requerimentos-minimos-rwa.md"
+  section: "4.2: – Detalhamento da Apuração dos Requerimentos Mínimos em Relação ao RWA"
+  pages: [15, 16, 17, 18, 19]
+  excerpt: "O RWA corresponde à soma das seguintes parcelas: RWACPAD, RWA CIRB, RWAMPAD, RWAMINT e RWAOPAD e RWASP."
+type: calculation
+inputs: [RWACPAD, RWACIRB, RWAMPAD, RWAMINT, RWAOPAD, RWASP]
+outcome:
+  formula: "RWA = RWACPAD + RWACIRB + RWAMPAD + RWAMINT + RWAOPAD + RWASP"

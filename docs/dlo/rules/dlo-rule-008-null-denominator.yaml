@@ -1,0 +1,15 @@
+id: DLO-RULE-008
+title: Use zero for a Table 003 formula with a null denominator
+source:
+  file: "02-orientacoes-gerais.md"
+  section: "2: - ORIENTAÇÕES GERAIS"
+  pages: [3, 4, 5]
+  excerpt: "quando apresentam operações de divisão, e o denominador for nulo ... o resultado deve ser considerado zero"
+type: calculation
+conditions:
+  - "formula_operation: division"
+  - "denominator: 0"
+outcome:
+  result: 0
+references:
+  - section: "Tabela 003"

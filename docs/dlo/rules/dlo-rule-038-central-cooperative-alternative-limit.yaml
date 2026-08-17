@@ -1,0 +1,15 @@
+id: DLO-RULE-038
+title: Alternative LEC accounts depend on central cooperative election
+source:
+  file: "05-tabelas/05.003-contas/05.003-k-lec-leco.md"
+  section: "5. Tabela 003 K: Detalhamento da apuração do limite de exposição por cliente e do limite de exposição concentrada"
+  pages: [134, 135, 136, 137, 138, 139]
+  excerpt: "as contas 215, 216, 217, 218 e 219 ... somente ... cooperativas centrais que fizeram a opção ... [as demais] não devem informar"
+type: conditional
+inputs: [is_central_credit_cooperative, alternative_limit_elected, parametro_07]
+outcome:
+  when_elected:
+    required_accounts: ["215", "216", "217", "218", "219"]
+  when_not_elected:
+    prohibited_accounts: ["215", "216", "217", "218", "219"]
+    parametro_07: "NÃO"

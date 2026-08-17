@@ -1,0 +1,16 @@
+id: DLO-RULE-015
+title: Patrimônio de Referência composition
+source:
+  file: "04-orientacoes-especificas/04.01-apuracao-pr.md"
+  section: "4.1: – Detalhamento do Cálculo de Apuração do PR (Situação da Instituição)"
+  pages: [14]
+  excerpt: "PR = PRN1 + PRN2" 
+type: calculation
+inputs: [PRN1, PRN2, CP, CC]
+outcome:
+  formulas:
+    - "PR = PRN1 + PRN2"
+    - "PRN1 = CP + CC"
+references:
+  - section: "Capítulo III, item 9"
+  - section: "Tabela 003 A"

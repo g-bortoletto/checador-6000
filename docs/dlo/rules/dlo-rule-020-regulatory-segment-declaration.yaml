@@ -1,0 +1,18 @@
+id: DLO-RULE-020
+title: Declare the regulatory segment from the June 2017 reference date
+source:
+  file: "04-orientacoes-especificas/04.02-requerimentos-minimos-rwa.md"
+  section: "4.2: – Detalhamento da Apuração dos Requerimentos Mínimos em Relação ao RWA"
+  pages: [15, 16, 17, 18, 19]
+  excerpt: "A partir da data-base Junho/17 as instituições deverão declarar ... qual o segmento ... parâmetro 6 da Tabela 006"
+type: requirement
+inputs: [reference_date, parametro_6]
+conditions:
+  - "reference_date_on_or_after: 2017-06"
+outcome:
+  required_parameter: "6"
+references:
+  - section: "Tabela 006"
+  - section: "Tabela 032"
+notes:
+  - "Classification itself is not derived by this catalog."
