@@ -1,0 +1,15 @@
+id: DLO-RULE-029
+title: New public-sector credit requires operational-limit compliance
+source:
+  file: "04-orientacoes-especificas/04.07-limite-credito-setor-publico.md"
+  section: "4.7: – Detalhamento do Cálculo do Limite de Crédito ao Setor Público (LCSP)"
+  pages: [23, 24]
+  excerpt: "Para realizar novas operações de crédito ... devem estar enquadradas nos limites operacionais"
+type: prohibition
+conditions:
+  - "new_credit_operation_with_public_sector: true"
+  - "operational_limits_compliant: false"
+outcome:
+  operation_permitted: false
+notes:
+  - "The source lists exceptions for Union responsibility or formal integral guarantee, and for linked identical funding and application structures."

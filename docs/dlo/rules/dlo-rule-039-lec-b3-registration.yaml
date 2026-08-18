@@ -1,0 +1,13 @@
+id: DLO-RULE-039
+title: B3 registration domain for LEC is only used absent SCR registration
+source:
+  file: "05-tabelas/05.029-sistema-registro.md"
+  section: "5. Tabela 029: Tabela 029 – Sistema de registro"
+  pages: [219]
+  excerpt: "este domínio somente deve ser utilizado somente se não houver registro no SCR"
+type: validation
+inputs: [registration_system_domain, scr_registration_exists]
+conditions:
+  - "registration_system_domain: '7'"
+outcome:
+  scr_registration_exists: false

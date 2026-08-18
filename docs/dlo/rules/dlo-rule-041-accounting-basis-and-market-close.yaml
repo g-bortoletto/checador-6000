@@ -1,0 +1,16 @@
+id: DLO-RULE-041
+title: DLO information uses definitive accounting records and month-end market-risk inputs
+source:
+  file: "02-orientacoes-gerais.md"
+  section: "2: - ORIENTAÇÕES GERAIS"
+  pages: [3, 4, 5]
+  excerpt: "devem ser baseadas nos registros contábeis definitivos, posteriores aos atos societários ... risco de mercado ... último dia útil do mês da data-base"
+type: requirement
+conditions:
+  - "DLO_information: reported"
+outcome:
+  accounting_basis: definitive_records_after_corporate_acts
+  market_risk_positions: closing_positions_on_last_business_day_of_reference_month
+  market_risk_parameters: values_valid_on_last_business_day_of_reference_month
+notes:
+  - "The source additionally specifies June/December balance-sheet consistency, other-month trial-balance consistency, and six closing semesters for RWAOPAD."

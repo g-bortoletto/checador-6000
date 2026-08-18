@@ -1,0 +1,12 @@
+id: DLO-RULE-027
+title: Federal public securities are excluded from LCSP calculation
+source:
+  file: "04-orientacoes-especificas/04.07-limite-credito-setor-publico.md"
+  section: "4.7: – Detalhamento do Cálculo do Limite de Crédito ao Setor Público (LCSP)"
+  pages: [23, 24]
+  excerpt: "Títulos Públicos Federais não devem ser considerados no cálculo do limite."
+type: prohibition
+conditions:
+  - "instrument: federal_public_security"
+outcome:
+  include_in_lcsp_calculation: false

@@ -1,0 +1,13 @@
+id: DLO-RULE-004
+title: Send pending reference dates after final CNPJ registration
+source:
+  file: "02-orientacoes-gerais.md"
+  section: "2: - ORIENTAÇÕES GERAIS"
+  pages: [3, 4, 5]
+  excerpt: "as datas-bases pendentes deverão ser enviadas após o registro no módulo Dados Básicos do Unicad"
+type: requirement
+conditions:
+  - "institution_has_final_cnpj: false"
+  - "pending_reference_dates: true"
+outcome:
+  submission_required_after: "Unicad Dados Básicos registration"

@@ -1,0 +1,11 @@
+id: DLO-RULE-031
+title: Concentrated exposure threshold is ten percent of PR Level I
+source:
+  file: "04-orientacoes-especificas/04.08-limite-exposicao-cliente.md"
+  section: "4.8: – Detalhamento do Cálculo do Limite de Exposição por Cliente (LEC) e do Limite de Exposições Concentradas"
+  pages: [25]
+  excerpt: "considera-se exposição concentrada ... valor igual ou maior do que 10% do Nível I do PR"
+type: conditional
+inputs: [client_total_exposure, PR_nivel_I]
+outcome:
+  concentrated_when: "client_total_exposure >= 0.10 * PR_nivel_I"

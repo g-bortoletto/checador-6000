@@ -1,0 +1,13 @@
+id: DLO-RULE-007
+title: Submit DLO reference dates sequentially
+source:
+  file: "02-orientacoes-gerais.md"
+  section: "2: - ORIENTAÇÕES GERAIS"
+  pages: [3, 4, 5]
+  excerpt: "se requer o encaminhamento do documento relativo à data-base anterior para que o sistema recepcione ... a data-base subsequente"
+type: validation
+inputs: [reference_date, preceding_reference_date_submission]
+conditions:
+  - "preceding_reference_date_submission: not_received"
+outcome:
+  subsequent_reference_date_receivable: false

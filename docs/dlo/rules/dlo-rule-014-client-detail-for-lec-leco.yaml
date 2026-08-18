@@ -1,0 +1,14 @@
+id: DLO-RULE-014
+title: LEC and LECO client accounts require client identification
+source:
+  file: "03-orientacoes-gerais-arquivo-xml.md"
+  section: "3: – ORIENTAÇÕES GERAIS SOBRE O ARQUIVO XML"
+  pages: [6, 7, 8, 9, 10, 11, 12, 13]
+  excerpt: "As contas 200.01 a 200.60 ... devem incluir a tag 'cliente' ... Caso o cliente represente um grupo econômico, a tag 'detalhamentoCliente' é necessária"
+type: requirement
+conditions:
+  - "codigoConta in: 200.01..200.60"
+outcome:
+  required_fields: [identificacaoCliente, tipoCliente, nomeCliente]
+notes:
+  - "For an economic group, detalhamentoCliente is also required with participant identification, type, and grouping reason."

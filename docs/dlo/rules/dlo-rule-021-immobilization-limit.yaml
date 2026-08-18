@@ -1,0 +1,15 @@
+id: DLO-RULE-021
+title: Imobilization limit and compliance test
+source:
+  file: "04-orientacoes-especificas/04.03-limite-imobilizacao.md"
+  section: "4.3: – Detalhamento do cálculo de Apuração do Limite de Imobilização"
+  pages: [20]
+  excerpt: "LI = MAX (0; 0,50 X PR_LI) ... enquadrada ... quando o valor da situação for menor ou igual ao valor do limite."
+type: calculation
+inputs: [PR_LI, ativo_permanente, deducoes_previstas]
+outcome:
+  limit_formula: "LI = max(0, 0.50 * PR_LI)"
+  situation_formula: "ativo_permanente - deducoes_previstas"
+  compliant_when: "situation <= LI"
+notes:
+  - "Applicability is stated in the source but classification of the listed institutions is not automated here."

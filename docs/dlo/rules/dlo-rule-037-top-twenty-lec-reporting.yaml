@@ -1,0 +1,13 @@
+id: DLO-RULE-037
+title: Report the twenty largest client exposures in descending order
+source:
+  file: "05-tabelas/05.003-contas/05.003-k-lec-leco.md"
+  section: "5. Tabela 003 K: Detalhamento da apuração do limite de exposição por cliente e do limite de exposição concentrada"
+  pages: [134, 135, 136, 137, 138, 139]
+  excerpt: "As contas ... 200.01 a 200.20 são de preenchimento obrigatório ... A maior exposição ... 200.01 ... em ordem decrescente"
+type: requirement
+inputs: [client_total_exposures]
+outcome:
+  required_accounts: "200.01 through 200.20"
+  account_200_01: largest_exposure
+  remaining_accounts_order: descending_total_exposure

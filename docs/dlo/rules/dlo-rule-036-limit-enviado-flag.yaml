@@ -1,0 +1,16 @@
+id: DLO-RULE-036
+title: Limit sent flag reflects applicability and submitted accounts
+source:
+  file: "05-tabelas/05.002-limite-enviado.md"
+  section: "5. Tabela 002: Tabela 002 – Informação se o limite foi enviado"
+  pages: [29]
+  excerpt: "sujeita a determinado limite, deverá informar ... 'S' e informar o conjunto de contas ... não esteja sujeita ... deverá informar 'N'"
+type: validation
+inputs: [limit_applicable, enviado, limit_account_set]
+outcome:
+  when_applicable:
+    enviado: "S"
+    limit_account_set_required: true
+  when_not_applicable:
+    enviado: "N"
+    limit_account_set_required: false

@@ -1,0 +1,14 @@
+id: DLO-RULE-010
+title: Account values use two-decimal monetary units and truncation
+source:
+  file: "03-orientacoes-gerais-arquivo-xml.md"
+  section: "3: – ORIENTAÇÕES GERAIS SOBRE O ARQUIVO XML"
+  pages: [6, 7, 8, 9, 10, 11, 12, 13]
+  excerpt: "R$ 1,00, com 2 (duas) casas decimais separadas por '.' ... truncado ... ignorando-se frações de centavos"
+type: validation
+inputs: [valorConta]
+outcome:
+  currency_unit: "BRL 1.00"
+  decimal_places: 2
+  decimal_separator: "."
+  rounding: truncate

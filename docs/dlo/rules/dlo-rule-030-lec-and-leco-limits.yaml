@@ -1,0 +1,16 @@
+id: DLO-RULE-030
+title: LEC and LECO maximum exposure limits
+source:
+  file: "04-orientacoes-especificas/04.08-limite-exposicao-cliente.md"
+  section: "4.8: – Detalhamento do Cálculo do Limite de Exposição por Cliente (LEC) e do Limite de Exposições Concentradas"
+  pages: [25]
+  excerpt: "25% do Nível I ... Excetuam-se ... cooperativas singulares não filiadas ... 15% ... exposições concentradas ... 600%"
+type: calculation
+inputs: [PR_nivel_I]
+conditions:
+  - "institution_type in: [Tipo 1, Tipo 3]"
+  - "regulatory_segment in: [S1, S2, S3, S4]"
+outcome:
+  lec_limit_formula: "0.25 * PR_nivel_I"
+  non_affiliated_single_credit_cooperative_lec_limit_formula: "0.15 * PR_nivel_I"
+  leco_limit_formula: "6.00 * PR_nivel_I"

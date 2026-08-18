@@ -1,0 +1,13 @@
+id: DLO-RULE-025
+title: Restricted and indirectly held non-consolidated public titles are excluded from FLAF
+source:
+  file: "04-orientacoes-especificas/04.06-fundo-liquidez-agencias-fomento.md"
+  section: "4.6: – Detalhamento do Cálculo do Fundo de Liquidez das Agências de Fomento"
+  pages: [22]
+  excerpt: "não podem ser considerados os títulos públicos que possuam vínculos que restrinjam a capacidade de realização ... bem como aqueles detidos indiretamente por meio de fundos de investimento, não consolidados"
+type: prohibition
+conditions:
+  - "public_title_realization_restricted: true"
+  - "or: indirectly_held_through_nonconsolidated_investment_fund"
+outcome:
+  include_in_flaf: false

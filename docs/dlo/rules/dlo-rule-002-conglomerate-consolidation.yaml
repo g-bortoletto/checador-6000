@@ -1,0 +1,12 @@
+id: DLO-RULE-002
+title: Prudential conglomerates must report consolidated information
+source:
+  file: "02-orientacoes-gerais.md"
+  section: "2: - ORIENTAÇÕES GERAIS"
+  pages: [3, 4, 5]
+  excerpt: "Conglomerados prudenciais devem apresentar informações consolidadas."
+type: requirement
+conditions:
+  - "reporter_is_prudential_conglomerate: true"
+outcome:
+  reporting_basis: consolidated

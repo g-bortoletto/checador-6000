@@ -1,0 +1,14 @@
+id: DLO-RULE-005
+title: Reporting changes from the incorporation approval date
+source:
+  file: "02-orientacoes-gerais.md"
+  section: "2: - ORIENTAÇÕES GERAIS"
+  pages: [3, 4, 5]
+  excerpt: "A sociedade incorporadora deve enviar o Documento 2061 consolidado ... desde a data da Assembleia ... A(s) sociedade(s) incorporada(s) deve(m) suspender o envio"
+type: conditional
+conditions:
+  - "incorporation_approved: true"
+  - "reference_date_on_or_after: incorporation_approval_assembly_date"
+outcome:
+  acquirer_submission: consolidated_with_acquired_entities
+  acquired_entity_submission_required: false

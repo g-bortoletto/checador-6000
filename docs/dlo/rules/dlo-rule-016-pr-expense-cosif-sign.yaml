@@ -1,0 +1,13 @@
+id: DLO-RULE-016
+title: PR expense, loss, and accumulated-loss values have prescribed signs
+source:
+  file: "04-orientacoes-especificas/04.01-apuracao-pr.md"
+  section: "4.1: – Detalhamento do Cálculo de Apuração do PR (Situação da Instituição)"
+  pages: [14]
+  excerpt: "os valores das contas DLO devem ser informados como positivos. Contudo, o detalhamento contábil deve seguir o sinal da contabilidade"
+type: validation
+conditions:
+  - "value_category in: [despesas, perdas, prejuízos]"
+outcome:
+  dlo_account_value_sign: positive
+  cosif_detail_sign: accounting_sign

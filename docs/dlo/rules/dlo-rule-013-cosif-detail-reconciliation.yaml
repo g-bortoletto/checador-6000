@@ -1,0 +1,16 @@
+id: DLO-RULE-013
+title: Specified PR, RWACPAD, and RWAOPAD accounts require Cosif reconciliation
+source:
+  file: "03-orientacoes-gerais-arquivo-xml.md"
+  section: "3: – ORIENTAÇÕES GERAIS SOBRE O ARQUIVO XML"
+  pages: [6, 7, 8, 9, 10, 11, 12, 13]
+  excerpt: "devem incluir os campos 'codigoCosif' e 'saldoCosif' ... A soma dos 'saldoCosif' deve igualar o 'valorCosif'."
+type: validation
+inputs: [codigoCosif, saldoCosif, valorCosif]
+conditions:
+  - "account_has_specific_cosif_detail_indication: true"
+  - "account_group in: [PR, RWACPAD, RWAOPAD]"
+outcome:
+  assertion: "sum(saldoCosif) == valorCosif"
+notes:
+  - "codigoCosif must use the greatest existing Cosif account-detail level; reducers have negative signs."

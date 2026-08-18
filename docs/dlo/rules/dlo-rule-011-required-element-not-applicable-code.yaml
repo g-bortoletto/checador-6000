@@ -1,0 +1,15 @@
+id: DLO-RULE-011
+title: Required but inapplicable account elements use not-applicable or zero
+source:
+  file: "03-orientacoes-gerais-arquivo-xml.md"
+  section: "3: – ORIENTAÇÕES GERAIS SOBRE O ARQUIVO XML"
+  pages: [6, 7, 8, 9, 10, 11, 12, 13]
+  excerpt: "Se obrigatórios, e não aplicáveis, utilize o código correspondente a 'não se aplica' ou zero (para valores)."
+type: validation
+conditions:
+  - "element_required: true"
+  - "element_applicable: false"
+outcome:
+  permitted_value: "not-applicable code or zero for a value"
+references:
+  - section: "Tabela 004"
