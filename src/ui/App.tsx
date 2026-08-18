@@ -6,8 +6,8 @@ import {
 	Center,
 	Container,
 	Group,
-	List,
 	MantineProvider,
+	SimpleGrid,
 	Stack,
 	Text,
 	Title,
@@ -22,7 +22,7 @@ import {
 	WarningCircleIcon,
 } from "@phosphor-icons/react";
 import { useState } from "react";
-import { validateDloXml } from "../core/XsdValidator";
+import { validateDloXml } from "../core/ValidationPipeline";
 import { type ValidationResult } from "../core/ValidationResultTypes";
 import { theme } from "./theme";
 import Logo from "./components/Logo";
@@ -77,8 +77,8 @@ export default function App() {
 								<Title order={1}>Checador 6000</Title>
 							</Center>
 							<Text c="dimmed">
-								Valide arquivos XML com o schema DLO 2061. O processamento e
-								feito localmente no seu navegador.
+								Valide a estrutura e o cabecalho de arquivos DLO 2061. O processamento
+								 e feito localmente no seu navegador.
 							</Text>
 						</Stack>
 
@@ -138,32 +138,26 @@ export default function App() {
 						)}
 
 						{result && (
-							<Alert
-								color={
-									result.valid
-										? "var(--mantine-color-success)"
-										: "var(--mantine-color-error)"
-								}
-								title={result.valid ? "XML valido" : "XML invalido"}
-								icon={
-									result.valid ? <CheckCircleIcon /> : <WarningCircleIcon />
-								}
-							>
-								{result.valid ? (
-									"O arquivo atende ao schema DLO 2061."
-								) : (
-									<List spacing="xs">
-										{result.errors.map((validationError, index) => (
-											<List.Item key={`${validationError.line}-${index}`}>
-												{validationError.line
-													? `Linha ${validationError.line}: `
-													: ""}
-												{validationError.message}
-											</List.Item>
-										))}
-									</List>
-								)}
-							</Alert>
+							<Stack gap="md">
+								<Alert
+									color={result.valid ? "var(--mantine-color-success)" : "var(--mantine-color-error)"}
+									title={result.valid ? "Documento aceito na validacao local" : "Documento rejeitado"}
+									icon={result.valid ? <CheckCircleIcon /> : <WarningCircleIcon />}
+								>
+									{result.valid ? "Nenhuma rejeicao de entrada foi encontrada." : "Corrija as rejeicoes de entrada antes de submeter o documento."}
+								</Alert>
+								<SimpleGrid cols={{ base: 1, sm: 3 }}>
+									<Card withBorder padding="sm"><Text size="xs" c="dimmed">Rejeicoes</Text><Text fw={700} size="xl">{result.summary.rejected}</Text></Card>
+									<Card withBorder padding="sm"><Text size="xs" c="dimmed">Indicios</Text><Text fw={700} size="xl">{result.summary.indications}</Text></Card>
+									<Card withBorder padding="sm"><Text size="xs" c="dimmed">Regras indisponiveis</Text><Text fw={700} size="xl">{result.summary.skipped}</Text></Card>
+								</SimpleGrid>
+								{result.issues.map((issue, index) => (
+									<Alert key={`${issue.id}-${issue.xpath ?? ""}-${index}`} color={issue.outcome === "skipped" ? "yellow" : "red"} title={`${issue.id}${issue.elim ? ` / ${issue.elim}` : ""}`}>
+										<Text>{issue.message}</Text>
+										<Text size="xs" c="dimmed">{issue.outcome === "skipped" ? "Cobertura indisponivel" : "Rejeicao"}{issue.line ? ` | Linha ${issue.line}` : ""}{issue.xpath ? ` | ${issue.xpath}` : ""}{issue.missingDependencies?.length ? ` | Dependencia: ${issue.missingDependencies.join(", ")}` : ""}</Text>
+									</Alert>
+								))}
+							</Stack>
 						)}
 					</Stack>
 				</Container>

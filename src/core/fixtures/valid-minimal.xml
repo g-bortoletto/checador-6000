@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<documentoDLO cnpj="12345678" dataBase="2026-06" codigoDocumento="2061" tipoEnvio="I">
+  <limitesInformados>
+    <limite codigoLimite="01.00" enviado="S" />
+    <limite codigoLimite="02.00" enviado="N" />
+  </limitesInformados>
+  <parametros>
+    <parametro codigoParametro="4" valorParametro="2" />
+  </parametros>
+  <contas>
+    <conta codigoConta="100" valorConta="0.00" />
+  </contas>
+</documentoDLO>

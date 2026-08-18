@@ -15,11 +15,13 @@
 		"@types/react": "^19.2.18",
 		"@types/react-dom": "^19.2.4",
 		"@vitejs/plugin-react": "^6.0.5",
+		"jsdom": "^29.1.1",
 		"postcss": "^8.5.26",
 		"postcss-preset-mantine": "1.18.0",
 		"postcss-simple-vars": "^7.0.1",
 		"typescript": "7.0.2",
-		"vite": "^8.2.1"
+		"vite": "^8.2.1",
+		"vitest": "^4.1.11"
 	},
 	"name": "checador-6000",
 	"private": true,
@@ -27,6 +29,7 @@
 		"build": "tsc && vite build",
 		"dev": "vite",
 		"preview": "vite preview",
+		"test": "vitest run",
 		"typecheck": "tsc --noEmit"
 	},
 	"type": "module",

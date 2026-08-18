@@ -34,16 +34,16 @@ Para data-base a partir de 2026-07, a regra documental e a configuracao vigente 
 
 ## Fase 1: Fundacao do Pipeline
 
-**Progresso: 0%**
+**Progresso: 100%**
 
 ### Entregaveis
 
-- [ ] Expandir `src/core/ValidationResultTypes.ts` para resultados normalizados com `id`, `stage`, `outcome`, `severity`, ELIM, RGR, mensagem, linha, XPath e dependencias ausentes.
-- [ ] Criar modelo DLO tipado e parser semantico de XML, preservando localizacao dos nos quando disponivel.
-- [ ] Manter XSD como primeira barreira e adicionar validacoes documentais que ele nao representa corretamente.
-- [ ] Validar bytes, declaracao XML e encoding para `PRE-XML-001`. `File.text()` nao preserva informacao suficiente para garantir o encoding declarado.
-- [ ] Aplicar as regras de cabecalho para CNPJ, `dataBase`, `codigoDocumento` e `tipoEnvio`.
-- [ ] Atualizar a interface para apresentar sumario, rejeicoes, indicios, regras ignoradas e contexto por ocorrencia.
+- [x] Expandir `src/core/ValidationResultTypes.ts` para resultados normalizados com `id`, `stage`, `outcome`, `severity`, ELIM, RGR, mensagem, linha, XPath e dependencias ausentes.
+- [x] Criar modelo DLO tipado e parser semantico de XML, preservando localizacao dos nos quando disponivel.
+- [x] Manter XSD como primeira barreira e adicionar validacoes documentais que ele nao representa corretamente.
+- [x] Validar bytes, declaracao XML e encoding para `PRE-XML-001`. `File.text()` nao preserva informacao suficiente para garantir o encoding declarado.
+- [x] Aplicar as regras de cabecalho para CNPJ, `dataBase`, `codigoDocumento` e `tipoEnvio`.
+- [x] Atualizar a interface para apresentar sumario, rejeicoes, indicios, regras ignoradas e contexto por ocorrencia.
 
 ### Arquivos previstos
 
@@ -206,16 +206,16 @@ Para data-base a partir de 2026-07, a regra documental e a configuracao vigente 
 
 ## Fase 7: Qualidade e Governanca
 
-**Progresso: 0%**
+**Progresso: 100%**
 
 ### Entregaveis
 
-- [ ] Adicionar Vitest, script `test` e verificacao de `typecheck`, testes e build em CI.
-- [ ] Criar fixtures XML minimas, validas e invalidas, por familia de regra.
-- [ ] Nao usar `dlo-arquivo-exemplo.xml` como fixture positiva sem curadoria; ele contem dados ilustrativos e inconsistencias deliberadas.
-- [ ] Criar testes para parser CSV, vigencia, DSL, arredondamento Decimal, ELIM/RGR e regressao de configuracao.
-- [ ] Criar teste de completude do manifesto: cada `PRE-*`, ELIM e critica DLO/LIM deve estar como `implemented`, `partial`, `conditional` ou `blocked`, com justificativa.
-- [ ] Documentar atualizacao regulatoria: nova planilha, extracao, diff de configuracao, revisao de vigencia, regressao e aprovacao.
+- [x] Adicionar Vitest, script `test` e verificacao de `typecheck`, testes e build em CI.
+- [x] Criar fixtures XML minimas, validas e invalidas, por familia de regra.
+- [x] Nao usar `dlo-arquivo-exemplo.xml` como fixture positiva sem curadoria; ele contem dados ilustrativos e inconsistencias deliberadas.
+- [x] Criar testes para parser CSV, vigencia, DSL, arredondamento Decimal, ELIM/RGR e regressao de configuracao.
+- [x] Criar teste de completude do manifesto: cada `PRE-*`, ELIM e critica DLO/LIM deve estar como `implemented`, `partial`, `conditional` ou `blocked`, com justificativa.
+- [x] Documentar atualizacao regulatoria: nova planilha, extracao, diff de configuracao, revisao de vigencia, regressao e aprovacao.
 
 ### Criterios de aceite
 
